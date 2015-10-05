@@ -35,11 +35,15 @@
   "targets": [
         {
             "target_name": "libtiff",
+	    'dependencies': [
+        	'../gyp-zlib/bindings/zlib.gyp:zlib'
+      		],
 	    #'product_prefix': 'lib',
             "type": "static_library",
             "include_dirs": [
-                "../libtiff/libtiff/"
-				"../libtiff/port/"
+                "../libtiff/libtiff/",
+				"../libtiff/port/",
+		"../gyp-zlib/zlib/"
             ],
 			'defines': [ 'NEED_LIBPORT' ],
             "sources": [
