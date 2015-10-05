@@ -36,14 +36,16 @@
         {
             "target_name": "libtiff",
 	    'dependencies': [
-        	'../gyp-zlib/bindings/zlib.gyp:zlib'
+        	'../gyp-zlib/bindings/zlib.gyp:zlib',
+		"../gyp-libjpeg/bindings/libjpeg.gyp:libjpeg",
       		],
 	    #'product_prefix': 'lib',
             "type": "static_library",
             "include_dirs": [
                 "../libtiff/libtiff/",
 				"../libtiff/port/",
-		"../gyp-zlib/zlib/"
+		"../gyp-zlib/zlib/",
+		"../gyp-libjpeg/libjpeg/",
             ],
 			'defines': [ 'NEED_LIBPORT' ],
             "sources": [
@@ -85,6 +87,8 @@
 			"../libtiff/libtiff/tif_warning.c",
 			"../libtiff/libtiff/tif_write.c",
 			"../libtiff/libtiff/tif_zip.c",
+			"../libtiff/libtiff/tif_jpeg.c",
+			#"../libtiff/libtiff/tiff_ojpeg.c",
 			"../libtiff/port/dummy.c",
 			"../libtiff/port/getopt.c",
 			"../libtiff/port/lfind.c",

@@ -1,3 +1,9 @@
 [submodule "gyp-zlib"]
 	path = gyp-zlib
 	url = https://github.com/sumedhghaisas/gyp-zlib.git
+[submodule "libtiff/gyp-libjpeg"]
+	path = libtiff/gyp-libjpeg
+	url = https://github.com/sumedhghaisas/gyp-libjpeg.git
+[submodule "gyp-libjpeg"]
+	path = gyp-libjpeg
+	url = https://github.com/sumedhghaisas/gyp-libjpeg.git

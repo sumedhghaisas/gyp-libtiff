@@ -12,6 +12,8 @@
       ],
       "include_dirs": [
         "../libtiff/libtiff/",
+	"../gyp-zlib/zlib/",
+	"../gyp-libjpeg/libjpeg",
 		"../libtiff/port/",
 		"../config/<(OS)/<(target_arch)",
       ],
