@@ -5,12 +5,15 @@
       'dependencies': [
         '../bindings/libtiff.gyp:libtiff'
       ],
+	  'defines': [ 'NEED_LIBPORT' ],
       'sources': [
-        
+        "bmp2tiff.c",
+		"bmp2tiff_wrapper.cpp",
       ],
       "include_dirs": [
         "../libtiff/libtiff/",
-	"../config/<(OS)/<(target_arch)"
+		"../libtiff/port/",
+		"../config/<(OS)/<(target_arch)",
       ],
     }
   ]
